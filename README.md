@@ -6,3 +6,4 @@ App Description:
 Goal:
 
 Fonts:
+Fragment Core by Sugargliderz (Link: https://www.dafont.com/fragment-core.font)

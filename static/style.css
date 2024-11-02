@@ -4,6 +4,12 @@
     text-align: left;
 }
 
+.main {
+    background-color: rgb(160, 90, 90);
+    padding: 20px;
+    text-align: left;
+}
+
 body{
     background-color: antiquewhite;
 }

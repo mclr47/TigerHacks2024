@@ -8,6 +8,8 @@ app = Flask(__name__)
 def hello():
     return render_template('index.html', utc_dt=datetime.datetime.utcnow())
 
+
+
 if __name__ == '__main__':
 
     # run() method of Flask class runs the application 

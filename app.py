@@ -1,26 +1,34 @@
 import datetime
-from flask import Flask, render_template, request
+from flask import Flask, render_template
+from flask_moment import Moment
+
 
 app = Flask(__name__)
 
+#----Martian
+moment = Moment(app)
+
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment() }}
+{% endblock %}
+
+#in the index.html:
+#<p>The local date and time is {{ moment(current_time).format('LLL') }}.</p>
+#<p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
+
+#@app.route('/')
+#def index():
+#    return render_template('index.html',
+#                           current_time=datetime.utcnow())
+#---end Martian
 
 @app.route('/')
 def hello():
-    return render_template('index.html', output=None)
-
-@app.route('/calculate')
-def calculate():
-    amt_corn = request.form.get('amt_corn')
-    quality = request.form.get('quality')
-    destination = request.form.get('destiation')
-    cost = request.form.get('cost')
-    corn = amt_corn * (quality * .1)
-    dest = destination / 1000
-    if dest > 1:
-        output = (cost*corn) / dest
-    else:
-        output = (cost*corn) / 1
-    return render_template('index.html', output=output)
+    return render_template('index.html', utc_dt=datetime.datetime.utcnow())
 
 if __name__ == '__main__':
+
+    # run() method of Flask class runs the application 
+    # on the local development server.
     app.run()

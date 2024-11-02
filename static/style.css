@@ -2,12 +2,15 @@
     background-color: palegreen;
     padding: 20px;
     text-align: left;
+    border-radius: 2px;
 }
 /*W3Schools helped with splitting the screen*/
 .main {
     background-color: rgb(160, 90, 90);
     position: fixed;
     overflow-x: hidden;
+    border-radius: 4px;
+
 }
 
 .left{
@@ -19,10 +22,10 @@
 }
 
 .questionButton {
-    background-color: gray;
+    background-color: rgb(212, 212, 212);
     border-radius: 100%;
     border:none;
-    margin: 4px;
+    margin: 5px;
 }
 
 .tooltipgiver {
@@ -33,8 +36,11 @@
 .tooltipgiver .tooltips {
     visibility: hidden;
     background-color: antiquewhite;
+
+    border-color: black;
     opacity: 0;
     transition: opacity 1s;
+    
 }
 
 .tooltipgiver:hover .tooltips{
@@ -48,5 +54,7 @@ body{
 
 @font-face {
     font-family: "Fragment Core";
-    src: url(/static/Fragmentcore.otf);
+    src: 
+    local("/static/Fragmentcore.otf"),
+    url(/static/Fragmentcore.otf) format("opentype");
 }

@@ -3,14 +3,26 @@
     padding: 20px;
     text-align: left;
 }
-
+/*W3Schools helped with splitting the screen*/
 .main {
     background-color: rgb(160, 90, 90);
+    position: fixed;
+    overflow-x: hidden;
+}
+
+.left{
+    left:0;
+}
+
+.right{
+    right: 0;
 }
 
 .questionButton {
     background-color: gray;
     border-radius: 100%;
+    border:none;
+    margin: 4px;
 }
 
 body{

@@ -25,6 +25,23 @@
     margin: 4px;
 }
 
+.tooltipgiver {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipgiver .tooltips {
+    visibility: hidden;
+    background-color: antiquewhite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltipgiver:hover .tooltips{
+    visibility: visible;
+    opacity: 1;
+}
+
 body{
     background-color: antiquewhite;
 }
